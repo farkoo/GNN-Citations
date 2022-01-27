@@ -6,8 +6,23 @@ In this notebook, we want to solve this problem with the help of three methods.
 ## Method one: Use Traditional measures
 In this method, using Traditional measures, a set of network structure-dependent properties such as node degree, closseness centrality, betweenness centrality, page rank and etc. is calculated for each node, and using the results of these measures and node properties, and with the help of SVM classifier and Random Forest classifier, classify the nodes of this graph.
  
- ### Results of first method:
- * Traditional measures + SVM classifier => 31% Accuracy
- * Traditional measures + Node features + SVM classifier => 37% Accuracy
- * Traditional measures + Random Forest classifier => 27% Accuracy
- * Traditional measures + Node features + Random Fores classifier => 59% Accuracy
+ ### Results of the first method:
+ * Traditional measures + SVM classifier => 31% acc.
+ * Traditional measures + Node features + SVM classifier => 37% acc.
+ * Traditional measures + Random Forest classifier => 27% acc.
+ * Traditional measures + Node features + Random Fores classifier => 59% acc.
+
+## The second method: Use FeedForward Neural Network 
+We add eight FFN blocks with skip connections, so that we generate a baseline model with roughly the same number of parameters as the GNN models to be built later.
+
+### Results of the second method:
+* Traditional measures + 8-layer FFN => 30% acc.
+* Node features + 8-layer FFN => 78% acc.
+* Traditional measures + Node features + 8-layer FFN => 69% acc.
+
+## The third method: Use Graph Neural Network
+The GNN classification model follows the Design Space for Graph Neural Networks approach, as follows:
+1. Apply preprocessing using FFN to the node features to generate initial node representations.
+2. Apply one or more graph convolutional layer, with skip connections, to the node representation to produce node embeddings.
+3. Apply post-processing using FFN to the node embeddings to generat the final node embeddings.
+4. Feed the node embeddings in a Softmax layer to predict the node class.
