@@ -16,9 +16,9 @@ In this method, using Traditional measures, a set of network structure-dependent
 We add eight FFN blocks with skip connections, so that we generate a baseline model with roughly the same number of parameters as the GNN models to be built later.
 
 ### Results of the second method:
-* Traditional measures + 8-layer FFN => 30% acc.
-* Node features + 8-layer FFN => 78% acc.
-* Traditional measures + Node features + 8-layer FFN => 69% acc.
+* Traditional measures + 8-layer FFN model => 30% acc.
+* Node features + 8-layer FFN model => 78% acc.
+* Traditional measures + Node features + 8-layer FFN model => 69% acc.
 
 ## The third method: Use Graph Neural Network
 The GNN classification model follows the Design Space for Graph Neural Networks approach, as follows:
@@ -26,3 +26,23 @@ The GNN classification model follows the Design Space for Graph Neural Networks 
 2. Apply one or more graph convolutional layer, with skip connections, to the node representation to produce node embeddings.
 3. Apply post-processing using FFN to the node embeddings to generat the final node embeddings.
 4. Feed the node embeddings in a Softmax layer to predict the node class.
+
+### Result of the third method:
+* Node features + GNN model => 88% acc.
+
+## Support
+
+**Contact me @:**
+
+e-mail:
+
+* farzanehkoohestani2000@gmail.com
+
+Telegram id:
+
+* [@farzaneh_koohestani](https://t.me/farzaneh_koohestani)
+
+## License
+[MIT](https://github.com/farkoo/GNN-Citations/blob/master/LICENSE)
+&#0169; 
+[Farzaneh Koohestani](https://github.com/farkoo)
