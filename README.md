@@ -1,4 +1,4 @@
-# Node Classification with Graph Neural Networks
+# Node Classification with Graph Neural Networks :computer: :page_facing_up:	
 
 We want to classify a collection of articles into 7 categories. To do this, we used the **cora** dataset. This database contains article citations as a network and also has a set of node features.
 In this notebook, we want to solve this problem with the help of three methods.
@@ -10,14 +10,14 @@ In this method, using Traditional measures, a set of network structure-dependent
  * Traditional measures + SVM classifier => 31% acc.
  * Traditional measures + Node features + SVM classifier => 37% acc.
  * Traditional measures + Random Forest classifier => 27% acc.
- * Traditional measures + Node features + Random Fores classifier => 59% acc.
+ * Traditional measures + Node features + Random Fores classifier => 59% acc. :innocent:
 
 ## The second method: Use FeedForward Neural Network 
 We add eight FFN blocks with skip connections, so that we generate a baseline model with roughly the same number of parameters as the GNN models to be built later.
 
 ### Results of the second method:
 * Traditional measures + 8-layer FFN model => 30% acc.
-* Node features + 8-layer FFN model => 78% acc.
+* Node features + 8-layer FFN model => 78% acc. :smiling_face_with_three_hearts:
 * Traditional measures + Node features + 8-layer FFN model => 69% acc.
 
 ## The third method: Use Graph Neural Network
@@ -28,7 +28,7 @@ The GNN classification model follows the Design Space for Graph Neural Networks 
 4. Feed the node embeddings in a Softmax layer to predict the node class.
 
 ### Result of the third method:
-* Node features + GNN model => 88% acc.
+* Node features + GNN model => 88% acc. :heart_eyes:
 
 ## Support
 
