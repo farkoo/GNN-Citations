@@ -1,4 +1,4 @@
-# Node Classification with Graph Neural Networks :computer: :page_facing_up:	
+# Node Classification with Graph Neural Networks :earth_asia:	 :computer: :page_facing_up:	
 
 We want to classify a collection of articles into 7 categories. To do this, we used the **cora** dataset. This database contains article citations as a network and also has a set of node features.
 In this notebook, we want to solve this problem with the help of three methods.
